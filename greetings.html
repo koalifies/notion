@@ -39,7 +39,7 @@ body{
     
     var today = new Date();
     var hrs = today.getHours();
-    var dayOfWeek = weekday[today.getDay()];
+    var dayOfWeek = weekday[today.getDay()] "," ; 
         var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
 
     var greet;
@@ -52,6 +52,6 @@ body{
         greet = 'good evening  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+= "ashley " +`<div id="date">"," it's ${date}</div>`;
+        greet+= "ashley " +`<div id="date"> it's ${date}</div>`;
 </script> 
 </html>
