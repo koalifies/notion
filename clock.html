@@ -1,3 +1,4 @@
+  
 <!-- original : https://codepen.io/SeanNorton/pen/LWBXQL -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +15,7 @@
 
 body{
     background-color: #fff;
-    line-height: 1.5;
+    line-height: 1.6;
 
 }
 
@@ -27,8 +28,8 @@ h1 {
 
 .full-table {
     display: table;
-    height: 10%;
-    width: 10%;
+    height: 100%;
+    width: 100%;
 }
 
 .table-cell {
@@ -38,10 +39,10 @@ h1 {
 }
 
 .card {
-    padding: 10px 10px 10px 10px;
+    padding: 10px 25px 10px 25px;
     border-radius: 10px;
     background: #f0eee6;
-    width: 55vw;
+    width: 85vw;
     color: #fff;
     display: inline-block;
     box-shadow: 2px 2px 1px 0px #330835;
@@ -55,7 +56,7 @@ h1 {
 .clock {
     display: inline;
     font-family: 'Times New Roman', italic;
-    font-size: 1em;
+    font-size: 2em;
    
 }
 
@@ -73,14 +74,14 @@ h1 {
     display: inline;
     min-width: 162px;
     font-family: 'Times New Roman', italic;
-    font-size: 1em;
+    font-size: 2em;
     padding-right: 30px;
 }
 .greet{
     
     display:inline;
     font-family: 'Times New Roman', italic;
-    font-size: 1rem;
+    font-size: 2rem;
      padding-right: 30px;
 }
 
@@ -94,7 +95,8 @@ h1 {
     
     <div class="card">
         <div class="greet" id="greet"></div>
-    <div class="clock">
+      <div class="date" id="date"></div>
+      <div class="clock">
         <div class="time" id="hour"></div>
         <div class="colon">:</div>
         <div class="time" id="min"></div>
@@ -148,11 +150,16 @@ if (hour > 12) {
 }
 }
     
-
+// adds zero infront of single digit number
+function zeros(num) {
+if (num < 10) {
+    num = '0' + num
+};
 return num;
 }
 
 function dateTime() {
+date();
 clock();
 setTimeout(dateTime, 500);
 }
